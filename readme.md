@@ -98,12 +98,14 @@ Although MarketplaceKit has been tested on Ubuntu 16.04 LTS. It should work with
   e.g. apache
 
   ```
-  Options +FollowSymLinks
-  RewriteEngine On
-  
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule ^ index.php [L]
+  # Ensure that Apache listens on port 80
+  Listen 80
+  <VirtualHost *:80>
+      DocumentRoot "marketplacekit/public"
+      ServerName www.example.com
+
+      # Other directives here
+  </VirtualHost>
   ```
 
 - Visit your domain login and change the default password
