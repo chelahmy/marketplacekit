@@ -109,7 +109,7 @@ Although MarketplaceKit has been tested on Ubuntu 16.04 LTS. It should work with
 - Visit your domain login and change the default password
 
   ```
-  Default username: admin
+  Default username: admin@example.com
   Default password: changeme
   ```
   
