@@ -17,7 +17,7 @@ MarketplaceKit is a platform for building different types of online marketplaces
 
 MarketplaceKit uses popular, well documented packages without too much overhead to simplify a developers/designers life. Therefore, the following choices were made:
 
-- Based on the popular Laravel Framework
+- Based on the popular Laravel Framework version 5.6.37
 - Leverages Bootstrap 4 for a responsive and mobile-first theme out of the box
 - Separates theming logic from development by using Twig
 - Avoids JS frameworks that require compilation
