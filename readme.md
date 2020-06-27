@@ -39,10 +39,10 @@ MarketplaceKit is easy to customize, change the design and supports multiple lan
   - JSON PHP Extension
   - ImageMagick PHP Extension
 - MySQL 5.7.7 or greater
+- Redis
 - Node JS (8.9.4) - this is only required for compiling SCSS to CSS
 - Git
 - ImageMagick
-- Nginx
 
 Although MarketplaceKit has been tested on Ubuntu 16.04 LTS. It should work with any OS that satisfies the above requirements. Nginx (https://laravel.com/docs/5.6/deployment#nginx) is recommended as a webserver. Developers should also have knowledge of Laravel, Bootstrap and Twig for extending/building on top of MarketplaceKit.
 
@@ -85,27 +85,25 @@ Although MarketplaceKit has been tested on Ubuntu 16.04 LTS. It should work with
   php artisan db:seed
   ```
 
-- Configure your Nginx server block or Apache Vhost to point to the /public folder
+- Configure your Apache vhost to point to the */public* folder
 
-  e.g. nginx
-
-  ```
-  location / {
-      try_files $uri $uri/ /index.php?$query_string;
-  }
-  ```
-
-  e.g. apache
+  example
 
   ```
   # Ensure that Apache listens on port 80
   Listen 80
   <VirtualHost *:80>
-      DocumentRoot "marketplacekit/public"
+      DocumentRoot "/path/to/marketplacekit/public"
       ServerName www.example.com
 
       # Other directives here
   </VirtualHost>
+  ```
+
+- Development server
+
+  ```
+  php artisan serve
   ```
 
 - Visit your domain login and change the default password
@@ -117,7 +115,7 @@ Although MarketplaceKit has been tested on Ubuntu 16.04 LTS. It should work with
   
 - Add your domain to APP_URL in .env file
   ```
-  APP_URL=http://localhost.com
+  APP_URL=http://example.com
   ```
   Don't forget to add https:// in production.
   
