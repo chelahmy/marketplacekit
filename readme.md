@@ -38,7 +38,7 @@ MarketplaceKit is easy to customize, change the design and supports multiple lan
   - Ctype PHP Extension
   - JSON PHP Extension
   - ImageMagick PHP Extension
-- MySQL 5.7.7 or greater
+- MySQL 5.7.7 or later, or MariaDB 10.2.3 or later
 - Redis
 - Node JS (8.9.4) - this is only required for compiling SCSS to CSS
 - Git
@@ -67,6 +67,14 @@ Although MarketplaceKit has been tested on Ubuntu 16.04 LTS. It should work with
   DB_PASSWORD=secret
   ```
 
+  If using MariaDB then install [laravel-mariadb](https://github.com/ybr-nx/laravel-mariadb) patch. And edit *config/database.php*:
+  
+  ```
+  'connections' => [
+    'mysql' => [
+        'driver' => 'mariadb',
+  ```
+  
 - Create the public disk
 
   ```
