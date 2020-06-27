@@ -69,6 +69,7 @@ Although MarketplaceKit has been tested on Ubuntu 16.04 LTS and Debian stretch i
 
   If using MariaDB then install [laravel-mariadb](https://github.com/ybr-nx/laravel-mariadb) patch. And edit *config/database.php*:
   
+  See [comment](https://github.com/ybr-nx/laravel-mariadb/issues/14#issuecomment-527991305)
   ```
   'connections' => [
     'mysql' => [
